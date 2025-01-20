@@ -1,44 +1,76 @@
-# DPS Frontend Coding Challenge
+# DPS Angular Challenge
 
-## Overview
-
-This repository contains a very basic web application based on Typescript and React. Main application file is `App.tsx`. Node and npm are required.
-
-## Environment Setup
-
-Ensure you have Node.js (v14.x or later) and npm (v6.x or later) installed.  
-To set up and run the application, execute the following commands:
-
-```
-npm install
-npm run dev
-```
-
-The application will then be accessible at http://localhost:3000.
+A modern Angular application for customer management with filtering and highlighting features.
 
 ## Project Context
 
 You will be enhancing a new CRM (Customer Relationship Management) software aimed at managing customer data efficiently. Your task is to develop a feature that displays a searchable list of customers.
 
-Refer to the attached mockup image to guide your UI development 👇
+## Showcase
 
-![Mockup](images/mockup.png)
+### Real-time Search and Filtering
+![Project Showcase](images/showcase.png)
 
-## Challenge Tasks
+The image above demonstrates the key features of our implementation:
 
--   **Fork this project:** Start by forking this repository
--   **UI Implementation:** Implement the user interface according to the provided design mockup.
--   **Data Integration:** Utilize the endpoint https://dummyjson.com/users to fetch user data. If no filter is applied all data is displayed.
--   **Client-side Filtering:** Implement the following filters:
-    -   **Name Filter:** An input field that dynamically filters by `firstName` or `lastName` as you type.
-    -   **City Filter:** A dropdown that lists all cities present in the data. Users can select a city to filter the list accordingly.
-    -   **Highlight Feature:** A checkbox that when checked, highlights the oldest users within each city (use data field `city`)
-    -   **Optional:** Implement a 1-second debounce on the Name Filter input. This means the application should delay the filter action until 1 second has passed without any further input from the user. This optimization helps reduce the number of processing calls, enhancing performance.
--   **Submission:** After completing the challenge, email us the URL of your GitHub repository.
--   **Further information:**
-    -   If there is anything unclear regarding requirements, contact us by replying to our email.
-    -   Use small commits, we want to see your progress towards the solution.
-    -   Code clean and follow the best practices.
+1. **Name Search Field**: Type to instantly filter users by name
+2. **City Dropdown**: Select a specific city to filter users
+3. **Highlight Toggle**: Check to highlight the oldest person in each city
+4. **Results Table**: Displays filtered users with highlighting
 
-\
-Happy coding!
+## Requirements
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Angular CLI (~12.2.0)
+
+## Installation Guide
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd dps-react-challenge
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+   The application will be available at `http://localhost:4200/`
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+   The build artifacts will be stored in the `dist/` directory.
+
+## Development
+
+- Run `ng serve` for a dev server
+- Run `ng build` to build the project
+- Run `ng test` to execute unit tests
+- Run `ng lint` to lint the code
+
+## Troubleshooting
+
+If you encounter SCSS loading issues:
+1. Ensure Angular CLI is installed globally: `npm install -g @angular/cli`
+2. Clear Angular cache: `ng cache clean`
+3. Remove node_modules and reinstall: 
+   ```bash
+   rm -rf node_modules
+   npm install
+   ```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
